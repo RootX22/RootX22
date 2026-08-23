@@ -18,17 +18,21 @@
 
 ### About
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-light.svg">
+  <img alt="whoami: systems engineer working on real-time infrastructure" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-dark.svg" width="100%">
+</picture>
+
 I build systems where **latency and correctness both matter** — engines that
 decide before the next tick lands, video pipelines that can't buffer, and
 backends that stay honest under multi-tenant load.
 
-- 🧠 Currently on an **async SMC/ICT scalping engine** for XAUUSD
-- 📡 Running **WebRTC dashcam streaming** over the JT1078 telematics protocol
-- 🛡 Publishing **DevOps & security tooling** — hardening audits, zero-downtime deploys
-- ⚡ Obsessed with the hot path: Numba kernels, `O(1)` per-tick work, `rename(2)` swaps
-- 📫 Reach me at **henrry.220267@gmail.com**
+Most of what I ship is private, so the two public repos are the ones worth
+reading: both are small, both are tested in CI, and both exist because I hit
+the problem on a real box first.
 
-
+📫 **henrry.220267@gmail.com**
 
 ---
 
