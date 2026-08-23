@@ -1,112 +1,197 @@
-<h1 align="center">Mohamed Mohsen</h1>
+<div align="center">
 
-<p align="center">
-  <em>Systems engineer — real-time trading engines, video streaming infrastructure, and multi-tenant SaaS.</em>
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mohamed%20Mohsen&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Systems%20Engineer%20%7C%20Real-time%20Infrastructure&descAlignY=55&descSize=18" alt="header"/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/asyncio-event--driven-0A7E8C?style=flat-square" alt="asyncio">
-  <img src="https://img.shields.io/badge/PHP-Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel">
-  <img src="https://img.shields.io/badge/WebRTC-streaming-333333?style=flat-square&logo=webrtc&logoColor=white" alt="WebRTC">
-  <img src="https://img.shields.io/badge/Numba-JIT-00A3E0?style=flat-square" alt="Numba">
-</p>
+<a href="https://github.com/RootX22">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Async+trading+engines+at+tick+resolution;WebRTC+video+pipelines+with+sub-second+latency;Multi-tenant+SaaS+that+stays+honest+under+load;Servers+hardened+before+they+get+scanned" alt="Typing SVG" />
+</a>
 
----
+<br/>
 
-### What I build
+<img src="https://komarev.com/ghpvc/?username=RootX22&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="profile views" />
+<a href="https://github.com/RootX22?tab=followers"><img src="https://img.shields.io/github/followers/RootX22?label=Followers&style=for-the-badge&color=0e75b6" alt="followers" /></a>
+<a href="https://github.com/RootX22?tab=repositories"><img src="https://img.shields.io/badge/Repos-Public-0e75b6?style=for-the-badge&logo=github" alt="repos" /></a>
 
-I work on systems where **latency and correctness both matter** — engines that have to
-make a decision before the next tick arrives, video pipelines that can't buffer, and
-backends that have to stay honest under multi-tenant load.
+</div>
 
 ---
 
-### Selected work
+<img align="right" width="380" src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/graph.gif" alt="analytics" />
 
-#### 🛡 [sentinel-audit](https://github.com/RootX22/sentinel-audit) — Linux hardening auditor
-Dependency-free server security audit in pure Bash. 30 read-only checks across
-SSH exposure, filesystem permissions, account hygiene, network surface, and
-leaked credentials.
+### About
 
-* **Zero dependencies** — Bash 4 and coreutils. Runs on a minimal container or a
-  box you just SSH'd into for the first time; nothing to install first.
-* **Strictly read-only.** No check writes a file, restarts a service, or edits a
-  config. An auditor you can't trust to be inert is one you won't run on prod.
-* **Reads effective config, not files** — SSH checks go through `sshd -T`, which
-  resolves `Include` directives and `Match` blocks the way the daemon does.
-  Grepping `sshd_config` misses the drop-ins where distros keep real settings.
-* **Honest about gaps** — unprivileged runs report skips, not silent passes.
-* JSON output and threshold-based exit codes for CI gating.
+I build systems where **latency and correctness both matter** — engines that
+decide before the next tick lands, video pipelines that can't buffer, and
+backends that stay honest under multi-tenant load.
 
-`bash` · `devsecops` · `hardening` · `cis-benchmark`
+- 🧠 Currently on an **async SMC/ICT scalping engine** for XAUUSD
+- 📡 Running **WebRTC dashcam streaming** over the JT1078 telematics protocol
+- 🛡 Publishing **DevOps & security tooling** — hardening audits, zero-downtime deploys
+- ⚡ Obsessed with the hot path: Numba kernels, `O(1)` per-tick work, `rename(2)` swaps
+- 📫 Reach me at **henrry.220267@gmail.com**
 
-#### 🚀 [deploy-forge](https://github.com/RootX22/deploy-forge) — zero-downtime deploy toolkit
-Release-directory deployment with atomic symlink swaps, for servers where
-Kubernetes is overkill — a VPS or cPanel box deployed from GitHub Actions.
+<br clear="right"/>
 
-* **Atomic swaps.** Repointing `current` is a `rename(2)`, so no request ever
-  sees a half-updated document root. The naive `ln -sfn` unlinks before it
-  recreates, and requests landing in that window get a 404.
-* **Automatic rollback** on a failed health check, with the broken release left
-  on disk for inspection.
-* **Preflight checks** for the failures that strand a deploy halfway: disk and
-  inode exhaustion, real write probes, dangling symlinks, TLS expiry.
-* CI integration-tests the deploy, the rollback, and the pruning path.
+---
 
-`devops` · `ci-cd` · `github-actions` · `zero-downtime`
+<div align="center">
 
-#### ⚡ Gold Engine — async SMC/ICT scalping engine
-An event-driven `asyncio` rebuild of a synchronous advisory script into a non-blocking
-trading engine for 1M/3M/5M XAUUSD.
+### Tech Stack
 
-* **Two-layer pipeline** — a *static* structural layer that runs heavy analysis only on
-  candle close (swing clustering, liquidity pools, order blocks, FVGs, MTF bias), and a
-  *dynamic* layer that runs **O(1) per tick** for intrabar sweep detection and a
-  mitigation FSM.
-* **Numba-compiled hot paths** (`ema`, `wilder_atr`, `adx`, `find_swings`, `cluster_levels`)
-  with transparent pure-Python fallback when Numba isn't installed.
-* **Pluggable feeds** behind a `TickFeed` ABC — Twelve Data + Capital.com WebSocket for
-  live, `yfinance` replay for back-testing, MT5 `copy_ticks` on Windows.
-* **Risk layer before the router** — spread/news veto, confluence scoring, and a
-  `PaperRouter` default so nothing touches a funded account by accident.
-* ~13.7k lines of Python, with a local FastAPI dashboard pushing engine state over WebSocket.
+<img src="https://skillicons.dev/icons?i=python,php,laravel,js,ts,bash,docker,kubernetes,nginx,redis,mysql,postgres&theme=dark" alt="stack" />
+<br/>
+<img src="https://skillicons.dev/icons?i=fastapi,flask,githubactions,git,linux,vscode,cloudflare,grafana&theme=dark" alt="stack2" />
+
+</div>
+
+---
+
+### Featured Work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🛡 [sentinel-audit](https://github.com/RootX22/sentinel-audit)
+
+<a href="https://github.com/RootX22/sentinel-audit">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=RootX22&repo=sentinel-audit&theme=tokyonight&hide_border=true" alt="sentinel-audit" />
+</a>
+
+Linux hardening auditor in **pure Bash**. 30 read-only checks across SSH,
+filesystem, accounts, network exposure, and leaked credentials.
+
+Zero dependencies — runs on a box you just SSH'd into. Reads *effective* SSH
+config via `sshd -T`, so `sshd_config.d` drop-ins are resolved the way the
+daemon resolves them. JSON output for CI gating.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🚀 [deploy-forge](https://github.com/RootX22/deploy-forge)
+
+<a href="https://github.com/RootX22/deploy-forge">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=RootX22&repo=deploy-forge&theme=tokyonight&hide_border=true" alt="deploy-forge" />
+</a>
+
+Zero-downtime deploys for servers you actually SSH into. The symlink swap is a
+`rename(2)` — **no request ever sees a half-updated document root**.
+
+Health-checked with automatic rollback, plus a preflight that catches inode
+exhaustion and expiring TLS before they strand a deploy halfway.
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
+
+<br/>
+
+An event-driven `asyncio` rebuild of a synchronous advisory script into a
+non-blocking trading engine for 1M/3M/5M XAUUSD. ~13.7k lines of Python.
+
+```
+DataIngestionStream ── ticks ──▶ DualLayerEngine ──▶ RiskExecutionManager ──▶ OrderRouter
+        │                              │                                       (Paper/MT5)
+   TickFeed (ABC)              SMCStateEngine
+   ├ ReplayTickFeed            ├ static layer  (on candle close): StructuralContext
+   │  (yfinance backtest)      │   liquidity pools · OB/FVG · MTF bias · regime
+   └ MT5TickFeed               └ dynamic layer (every tick, O(1)): intrabar sweep ·
+      (copy_ticks, Windows)        mitigation FSM · spread/news veto · confluence
+```
+
+- **Two-layer pipeline** — heavy structural analysis only on candle close;
+  `O(1)` per-tick work for intrabar sweep detection and a mitigation FSM
+- **Numba-compiled hot paths** — `ema`, `wilder_atr`, `adx`, `find_swings`,
+  `cluster_levels`, with transparent pure-Python fallback
+- **Pluggable feeds** behind a `TickFeed` ABC — Twelve Data + Capital.com
+  WebSocket live, `yfinance` replay for backtesting
+- **Risk layer before the router** — spread/news veto, confluence scoring, and a
+  `PaperRouter` default so nothing touches a funded account by accident
 
 `asyncio` · `numba` · `numpy` · `websockets` · `fastapi`
 
-#### 📹 Zeem — dashcam live video infrastructure
-Live video from Hikvision fleet dashcams, delivered to the browser with sub-second latency.
+</details>
 
-* **JT1078 → MediaMTX → WebRTC** pipeline — terminating the Chinese fleet-telematics
-  video protocol and republishing it as standards-compliant WebRTC.
-* No HLS segment latency; the browser gets the stream, not a playlist.
+<details>
+<summary><b>📹 Zeem</b> — dashcam live video infrastructure <i>(private)</i></summary>
 
-`webrtc` · `mediamtx` · `jt1078` · `rtsp` · `hikvision`
+<br/>
 
-#### 🏢 Zeem Platform — Laravel fleet backend
-The REST backend behind the fleet platform. Three environments, cPanel deployment,
-tuned against real production load — including running down a reported OOM issue to
-its actual cause rather than throwing memory at it.
+Live video from Hikvision fleet dashcams to the browser with sub-second latency.
 
-`laravel` · `php` · `rest-api` · `fleet-management`
+**JT1078 → MediaMTX → WebRTC** — terminating the Chinese fleet-telematics video
+protocol and republishing it as standards-compliant WebRTC. No HLS segment
+latency; the browser gets the stream, not a playlist.
 
-#### 🧩 Watheeq Pro — enterprise multi-tenant SaaS
-A phased multi-tenant SaaS build under its own GitHub organization, structured across
-separate service repositories.
+Paired with a Laravel REST backend across three environments on cPanel — tuned
+against real production load, including running a reported OOM down to its
+actual cause instead of throwing memory at it.
+
+`webrtc` · `mediamtx` · `jt1078` · `rtsp` · `laravel`
+
+</details>
+
+<details>
+<summary><b>🏢 Watheeq Pro</b> — enterprise multi-tenant SaaS <i>(private)</i></summary>
+
+<br/>
+
+A phased multi-tenant SaaS build under its own GitHub organization, structured
+across separate service repositories with a staged rollout roadmap.
 
 `saas` · `multi-tenant` · `laravel` · `enterprise`
 
----
-
-### Stack
-
-**Languages** Python · PHP · SQL · JavaScript
-**Async & perf** asyncio · uvloop · Numba · NumPy vectorization
-**Backend** Laravel · FastAPI · REST APIs · WebSockets
-**Streaming** WebRTC · MediaMTX · RTSP · JT1078
-**DevOps** GitHub Actions · Docker · zero-downtime deploys · server hardening
-**Domain** algorithmic trading · market microstructure · fleet telematics
+</details>
 
 ---
 
-<p align="center"><sub>Trading, streaming, and SaaS work lives in private repositories.</sub></p>
+<div align="center">
+
+### GitHub Stats
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=RootX22&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="stats" />
+<img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RootX22&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="top langs" />
+
+<br/>
+
+<img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true" alt="streak" />
+
+<br/>
+
+<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=RootX22&theme=tokyo-night&hide_border=true&area=true" alt="activity graph" />
+
+<br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=RootX22&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=7" alt="trophies" />
+
+</div>
+
+---
+
+<div align="center">
+
+### Contribution Snake
+
+<img src="https://raw.githubusercontent.com/RootX22/RootX22/output/snake.svg" alt="snake animation" />
+
+</div>
+
+---
+
+<div align="center">
+
+### Connect
+
+<a href="mailto:henrry.220267@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
+<a href="https://github.com/RootX22"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="github"/></a>
+
+<br/><br/>
+
+<i>Trading, streaming, and SaaS work lives in private repositories.</i>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" alt="footer"/>
+
+</div>
