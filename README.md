@@ -16,8 +16,6 @@
 
 ---
 
-<img align="right" width="380" src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/graph.gif" alt="analytics" />
-
 ### About
 
 I build systems where **latency and correctness both matter** — engines that
@@ -30,7 +28,7 @@ backends that stay honest under multi-tenant load.
 - ⚡ Obsessed with the hot path: Numba kernels, `O(1)` per-tick work, `rename(2)` swaps
 - 📫 Reach me at **henrry.220267@gmail.com**
 
-<br clear="right"/>
+
 
 ---
 
@@ -55,7 +53,10 @@ backends that stay honest under multi-tenant load.
 #### 🛡 [sentinel-audit](https://github.com/RootX22/sentinel-audit)
 
 <a href="https://github.com/RootX22/sentinel-audit">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=RootX22&repo=sentinel-audit&theme=tokyonight&hide_border=true" alt="sentinel-audit" />
+<img src="https://img.shields.io/github/stars/RootX22/sentinel-audit?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/languages/code-size/RootX22/sentinel-audit?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/sentinel-audit?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/badge/license-MIT-0e75b6?style=flat-square&labelColor=0b1b22" alt="license"/>
 </a>
 
 Linux hardening auditor in **pure Bash**. 30 read-only checks across SSH,
@@ -71,7 +72,10 @@ daemon resolves them. JSON output for CI gating.
 #### 🚀 [deploy-forge](https://github.com/RootX22/deploy-forge)
 
 <a href="https://github.com/RootX22/deploy-forge">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=RootX22&repo=deploy-forge&theme=tokyonight&hide_border=true" alt="deploy-forge" />
+<img src="https://img.shields.io/github/stars/RootX22/deploy-forge?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/languages/code-size/RootX22/deploy-forge?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/deploy-forge?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/badge/license-MIT-0e75b6?style=flat-square&labelColor=0b1b22" alt="license"/>
 </a>
 
 Zero-downtime deploys for servers you actually SSH into. The symlink swap is a
@@ -150,22 +154,19 @@ across separate service repositories with a staged rollout roadmap.
 
 <div align="center">
 
+### How the engine moves a tick
+
+<img width="92%" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/pipeline.svg" alt="tick pipeline" />
+
+<br/><br/>
+
 ### GitHub Stats
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=RootX22&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="stats" />
-<img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RootX22&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="top langs" />
+<img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true&background=0D1117&ring=36BCF7&fire=F2C14E&currStreakLabel=36BCF7" alt="streak" />
 
 <br/>
 
-<img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true" alt="streak" />
-
-<br/>
-
-<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=RootX22&theme=tokyo-night&hide_border=true&area=true" alt="activity graph" />
-
-<br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=RootX22&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=7" alt="trophies" />
+<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=RootX22&theme=tokyo-night&hide_border=true&area=true&bg_color=0D1117&color=36BCF7&line=5EE1A0&point=F2C14E" alt="activity graph" />
 
 </div>
 
