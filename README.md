@@ -56,11 +56,11 @@ backends that stay honest under multi-tenant load.
 <img src="https://img.shields.io/github/stars/RootX22/sentinel-audit?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
 <img src="https://img.shields.io/github/languages/code-size/RootX22/sentinel-audit?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
 <img src="https://img.shields.io/github/last-commit/RootX22/sentinel-audit?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
-<img src="https://img.shields.io/badge/license-MIT-0e75b6?style=flat-square&labelColor=0b1b22" alt="license"/>
+<img src="https://img.shields.io/github/v/release/RootX22/sentinel-audit?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-Linux hardening auditor in **pure Bash**. 30 read-only checks across SSH,
-filesystem, accounts, network exposure, and leaked credentials.
+Linux hardening auditor in **pure Bash**. 34 read-only checks across SSH,
+filesystem, accounts, network exposure, Docker, and leaked credentials.
 
 Zero dependencies — runs on a box you just SSH'd into. Reads *effective* SSH
 config via `sshd -T`, so `sshd_config.d` drop-ins are resolved the way the
@@ -75,14 +75,15 @@ daemon resolves them. JSON output for CI gating.
 <img src="https://img.shields.io/github/stars/RootX22/deploy-forge?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
 <img src="https://img.shields.io/github/languages/code-size/RootX22/deploy-forge?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
 <img src="https://img.shields.io/github/last-commit/RootX22/deploy-forge?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
-<img src="https://img.shields.io/badge/license-MIT-0e75b6?style=flat-square&labelColor=0b1b22" alt="license"/>
+<img src="https://img.shields.io/github/v/release/RootX22/deploy-forge?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
 Zero-downtime deploys for servers you actually SSH into. The symlink swap is a
 `rename(2)` — **no request ever sees a half-updated document root**.
 
-Health-checked with automatic rollback, plus a preflight that catches inode
-exhaustion and expiring TLS before they strand a deploy halfway.
+Health-checked with automatic rollback, a manual rollback for when it breaks
+ten minutes later, and a preflight that catches inode exhaustion and expiring
+TLS before they strand a deploy halfway.
 
 </td>
 </tr>
