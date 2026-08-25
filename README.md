@@ -121,6 +121,31 @@ runtime dependencies, tested on Python 3.9–3.13.
 </tr>
 </table>
 
+
+<table>
+<tr>
+<td width="100%" valign="top">
+
+#### 🛡️ [wp-sentinel](https://github.com/RootX22/wp-sentinel)
+
+<a href="https://github.com/RootX22/wp-sentinel">
+<img src="https://img.shields.io/github/stars/RootX22/wp-sentinel?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/wp-sentinel?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/github/v/release/RootX22/wp-sentinel?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
+</a>
+
+Detection-only WordPress security scanner. Finds the misconfigurations that
+actually get sites compromised — readable `wp-config` backups, exposed debug
+logs, user enumeration, open XML-RPC — and says how to fix each.
+
+It **observes, never exploits**: no login attempts, no payloads, and an
+authorisation gate you pass before it scans anything. Zero dependencies, tested
+against a real WordPress container in CI, Python 3.9–3.13.
+
+</td>
+</tr>
+</table>
+
 <details>
 <summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
 
