@@ -1,6 +1,10 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mohamed%20Mohsen&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Systems%20Engineer%20%7C%20Real-time%20Infrastructure&descAlignY=55&descSize=18" alt="header"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-light.svg">
+  <img alt="Mohamed Mohsen — Systems Engineer, Real-time Infrastructure" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-dark.svg" width="100%">
+</picture>
 
 <a href="https://github.com/RootX22">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Async+trading+engines+at+tick+resolution;WebRTC+video+pipelines+with+sub-second+latency;Multi-tenant+SaaS+that+stays+honest+under+load;Servers+hardened+before+they+get+scanned" alt="Typing SVG" />
@@ -198,6 +202,10 @@ across separate service repositories with a staged rollout roadmap.
 
 <i>Trading, streaming, and SaaS work lives in private repositories.</i>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" alt="footer"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/footer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/footer-light.svg">
+  <img alt="" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/footer-dark.svg" width="100%">
+</picture>
 
 </div>
