@@ -97,6 +97,30 @@ TLS before they strand a deploy halfway.
 </tr>
 </table>
 
+<table>
+<tr>
+<td width="100%" valign="top">
+
+#### 🔐 [tls-sentry](https://github.com/RootX22/tls-sentry)
+
+<a href="https://github.com/RootX22/tls-sentry">
+<img src="https://img.shields.io/github/stars/RootX22/tls-sentry?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/tls-sentry?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/github/v/release/RootX22/tls-sentry?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
+</a>
+
+Certificate monitoring that tells you **what** is wrong. An expired certificate
+fails TLS verification, so most checkers catch the exception and report
+"connection failed" — the same message you get from a host that is simply down.
+
+tls-sentry handshakes a second time with verification off, purely to read the
+certificate, so it can say `expired 4152 days ago` instead of shrugging. Zero
+runtime dependencies, tested on Python 3.9–3.13.
+
+</td>
+</tr>
+</table>
+
 <details>
 <summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
 
@@ -172,10 +196,6 @@ across separate service repositories with a staged rollout roadmap.
 ### GitHub Stats
 
 <img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true&background=0D1117&ring=36BCF7&fire=F2C14E&currStreakLabel=36BCF7" alt="streak" />
-
-<br/>
-
-<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=RootX22&theme=tokyo-night&hide_border=true&area=true&bg_color=0D1117&color=36BCF7&line=5EE1A0&point=F2C14E" alt="activity graph" />
 
 </div>
 
