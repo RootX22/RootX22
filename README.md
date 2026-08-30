@@ -146,6 +146,32 @@ against a real WordPress container in CI, Python 3.9–3.13.
 </tr>
 </table>
 
+
+<table>
+<tr>
+<td width="100%" valign="top">
+
+#### 📅 [cronscope](https://github.com/RootX22/cronscope)
+
+<a href="https://github.com/RootX22/cronscope">
+<img src="https://img.shields.io/github/stars/RootX22/cronscope?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/cronscope?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/github/v/release/RootX22/cronscope?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
+</a>
+
+See inside your crontab. Predicts when jobs actually run, catches the mistakes
+that cause silent incidents — impossible `Feb 30` schedules, the
+day-of-month/day-of-week OR trap (`0 0 13 * 5` runs every Friday **and** the
+13th, not Friday the 13th), midnight collisions — and renders the week as a
+shareable heatmap.
+
+The next-run engine is cross-checked in CI against `croniter`, so it's validated
+against an independent implementation. Zero dependencies, Python 3.9–3.13.
+
+</td>
+</tr>
+</table>
+
 <details>
 <summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
 
