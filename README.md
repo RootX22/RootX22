@@ -172,6 +172,32 @@ against an independent implementation. Zero dependencies, Python 3.9–3.13.
 </tr>
 </table>
 
+
+<table>
+<tr>
+<td width="100%" valign="top">
+
+#### 🧭 [groundcheck](https://github.com/RootX22/groundcheck)
+
+<a href="https://github.com/RootX22/groundcheck">
+<img src="https://img.shields.io/github/stars/RootX22/groundcheck?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/last-commit/RootX22/groundcheck?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
+<img src="https://img.shields.io/github/v/release/RootX22/groundcheck?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
+</a>
+
+A **deterministic** groundedness linter for RAG/LLM answers. Reads an answer and
+its sources and flags claims that aren't supported — above all **fabricated
+numbers** (`margins hit 47%` when no source mentions margins), the highest-stakes
+hallucination.
+
+The point is determinism: an LLM-as-judge can't gate CI because it scores
+differently each run. groundcheck gives byte-identical output across runs, so it
+fits as a lint gate — the test suite proves it across hash seeds. Zero deps.
+
+</td>
+</tr>
+</table>
+
 <details>
 <summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
 
