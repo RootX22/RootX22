@@ -3,11 +3,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-light.svg">
-  <img alt="Mohamed Mohsen — Systems Engineer, Real-time Infrastructure" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-dark.svg" width="100%">
+  <img alt="Mohamed Mohsen — Software Engineer" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/header-dark.svg" width="100%">
 </picture>
 
 <a href="https://github.com/RootX22">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Async+trading+engines+at+tick+resolution;WebRTC+video+pipelines+with+sub-second+latency;Multi-tenant+SaaS+that+stays+honest+under+load;Servers+hardened+before+they+get+scanned" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=680&lines=Software+engineer+who+ships+small%2C+tested+tools;Security+scanners+that+observe%2C+never+exploit;Zero-dependency+CLIs+you+can+run+anywhere;Honest+about+what+each+tool+does+and+doesn't" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -25,16 +25,17 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-light.svg">
-  <img alt="whoami: systems engineer working on real-time infrastructure" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-dark.svg" width="100%">
+  <img alt="whoami: software engineer who builds tools other developers run" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/about-dark.svg" width="100%">
 </picture>
 
-I build systems where **latency and correctness both matter** — engines that
-decide before the next tick lands, video pipelines that can't buffer, and
-backends that stay honest under multi-tenant load.
+I'm a software engineer, and most of what I build is **command-line tooling** for
+other developers — security scanners, DevOps utilities, and AI infrastructure.
+Six of them are public and shipped below.
 
-Most of what I ship is private, so the two public repos are the ones worth
-reading: both are small, both are tested in CI, and both exist because I hit
-the problem on a real box first.
+Every one is the same shape on purpose: **small, zero-dependency, tested in CI,
+and honest about its limits.** I also build private production systems — an async
+trading engine, a WebRTC video platform, a multi-tenant SaaS — summarised at the
+bottom.
 
 📫 **henrry.220267@gmail.com**
 
@@ -44,167 +45,165 @@ the problem on a real box first.
 
 ### Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,php,laravel,js,ts,bash,docker,kubernetes,nginx,redis,mysql,postgres&theme=dark" alt="stack" />
-<br/>
-<img src="https://skillicons.dev/icons?i=fastapi,flask,githubactions,git,linux,vscode,cloudflare,grafana&theme=dark" alt="stack2" />
+<img src="https://skillicons.dev/icons?i=python,bash,php,laravel,js,ts,docker,githubactions,linux,nginx,redis,postgres&theme=dark" alt="stack" />
 
 </div>
 
 ---
 
-### Featured Work
+## 🧰 Open-source tools
 
 <table>
 <tr>
+
 <td width="50%" valign="top">
 
-#### 🛡 [sentinel-audit](https://github.com/RootX22/sentinel-audit)
-
+### 🛡️ [sentinel-audit](https://github.com/RootX22/sentinel-audit)
 <a href="https://github.com/RootX22/sentinel-audit">
 <img src="https://img.shields.io/github/stars/RootX22/sentinel-audit?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/languages/code-size/RootX22/sentinel-audit?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/sentinel-audit?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
 <img src="https://img.shields.io/github/v/release/RootX22/sentinel-audit?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-Linux hardening auditor in **pure Bash**. 34 read-only checks across SSH,
-filesystem, accounts, network exposure, Docker, and leaked credentials.
+Linux server hardening auditor in **pure Bash**. 34 read-only checks across SSH,
+filesystem, accounts, network exposure, Docker, and leaked credentials. Reads
+*effective* config via `sshd -T`; JSON output for CI.
 
-Zero dependencies — runs on a box you just SSH'd into. Reads *effective* SSH
-config via `sshd -T`, so `sshd_config.d` drop-ins are resolved the way the
-daemon resolves them. JSON output for CI gating.
+`bash` · `security` · `devsecops`
 
 </td>
+
 <td width="50%" valign="top">
 
-#### 🚀 [deploy-forge](https://github.com/RootX22/deploy-forge)
-
+### 🚀 [deploy-forge](https://github.com/RootX22/deploy-forge)
 <a href="https://github.com/RootX22/deploy-forge">
 <img src="https://img.shields.io/github/stars/RootX22/deploy-forge?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/languages/code-size/RootX22/deploy-forge?style=flat-square&color=5ee1a0&labelColor=0b1b22" alt="size"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/deploy-forge?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
 <img src="https://img.shields.io/github/v/release/RootX22/deploy-forge?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-Zero-downtime deploys for servers you actually SSH into. The symlink swap is a
-`rename(2)` — **no request ever sees a half-updated document root**.
+Zero-downtime deploys for servers you SSH into. The release swap is an atomic
+`rename(2)` — **no request sees a half-updated root**. Health-checked rollback,
+plus a preflight that catches the failures that strand a deploy halfway.
 
-Health-checked with automatic rollback, a manual rollback for when it breaks
-ten minutes later, and a preflight that catches inode exhaustion and expiring
-TLS before they strand a deploy halfway.
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="100%" valign="top">
-
-#### 🔐 [tls-sentry](https://github.com/RootX22/tls-sentry)
-
-<a href="https://github.com/RootX22/tls-sentry">
-<img src="https://img.shields.io/github/stars/RootX22/tls-sentry?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/tls-sentry?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
-<img src="https://img.shields.io/github/v/release/RootX22/tls-sentry?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
-</a>
-
-Certificate monitoring that tells you **what** is wrong. An expired certificate
-fails TLS verification, so most checkers catch the exception and report
-"connection failed" — the same message you get from a host that is simply down.
-
-tls-sentry handshakes a second time with verification off, purely to read the
-certificate, so it can say `expired 4152 days ago` instead of shrugging. Zero
-runtime dependencies, tested on Python 3.9–3.13.
+`devops` · `ci-cd` · `bash`
 
 </td>
+
 </tr>
-</table>
-
-
-<table>
 <tr>
-<td width="100%" valign="top">
 
-#### 🛡️ [wp-sentinel](https://github.com/RootX22/wp-sentinel)
+<td width="50%" valign="top">
 
+### 🔎 [wp-sentinel](https://github.com/RootX22/wp-sentinel)
 <a href="https://github.com/RootX22/wp-sentinel">
 <img src="https://img.shields.io/github/stars/RootX22/wp-sentinel?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/wp-sentinel?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
 <img src="https://img.shields.io/github/v/release/RootX22/wp-sentinel?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-Detection-only WordPress security scanner. Finds the misconfigurations that
-actually get sites compromised — readable `wp-config` backups, exposed debug
-logs, user enumeration, open XML-RPC — and says how to fix each.
+Detection-only WordPress security scanner. Finds the misconfigurations that get
+sites compromised — readable `wp-config` backups, exposed debug logs, user
+enumeration. **Observes, never exploits**; scans a real WP container in CI.
 
-It **observes, never exploits**: no login attempts, no payloads, and an
-authorisation gate you pass before it scans anything. Zero dependencies, tested
-against a real WordPress container in CI, Python 3.9–3.13.
+`wordpress` · `security` · `python`
 
 </td>
+
+<td width="50%" valign="top">
+
+### 🔐 [tls-sentry](https://github.com/RootX22/tls-sentry)
+<a href="https://github.com/RootX22/tls-sentry">
+<img src="https://img.shields.io/github/stars/RootX22/tls-sentry?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
+<img src="https://img.shields.io/github/v/release/RootX22/tls-sentry?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
+</a>
+
+TLS certificate monitor that tells you **what** is wrong. An expired cert fails
+verification, so most checkers just say "connection failed"; tls-sentry
+handshakes again to read the cert and report `expired 40 days ago`.
+
+`tls` · `monitoring` · `python`
+
+</td>
+
 </tr>
-</table>
-
-
-<table>
 <tr>
-<td width="100%" valign="top">
 
-#### 📅 [cronscope](https://github.com/RootX22/cronscope)
+<td width="50%" valign="top">
 
+### 📅 [cronscope](https://github.com/RootX22/cronscope)
 <a href="https://github.com/RootX22/cronscope">
 <img src="https://img.shields.io/github/stars/RootX22/cronscope?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/cronscope?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
 <img src="https://img.shields.io/github/v/release/RootX22/cronscope?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-See inside your crontab. Predicts when jobs actually run, catches the mistakes
-that cause silent incidents — impossible `Feb 30` schedules, the
-day-of-month/day-of-week OR trap (`0 0 13 * 5` runs every Friday **and** the
-13th, not Friday the 13th), midnight collisions — and renders the week as a
-shareable heatmap.
+See inside your crontab. Predicts real run times, catches silent mistakes (the
+`0 0 13 * 5` "Friday-**and**-the-13th" trap, `Feb 30`, midnight collisions), and
+renders the week as a heatmap. Cross-checked against `croniter` in CI.
 
-The next-run engine is cross-checked in CI against `croniter`, so it's validated
-against an independent implementation. Zero dependencies, Python 3.9–3.13.
+`cron` · `devops` · `visualization`
 
 </td>
-</tr>
-</table>
 
+<td width="50%" valign="top">
 
-<table>
-<tr>
-<td width="100%" valign="top">
-
-#### 🧭 [groundcheck](https://github.com/RootX22/groundcheck)
-
+### 🧭 [groundcheck](https://github.com/RootX22/groundcheck)
 <a href="https://github.com/RootX22/groundcheck">
 <img src="https://img.shields.io/github/stars/RootX22/groundcheck?style=flat-square&color=36BCF7&labelColor=0b1b22" alt="stars"/>
-<img src="https://img.shields.io/github/last-commit/RootX22/groundcheck?style=flat-square&color=f2c14e&labelColor=0b1b22" alt="last commit"/>
 <img src="https://img.shields.io/github/v/release/RootX22/groundcheck?style=flat-square&color=0e75b6&labelColor=0b1b22" alt="release"/>
 </a>
 
-A **deterministic** groundedness linter for RAG/LLM answers. Reads an answer and
-its sources and flags claims that aren't supported — above all **fabricated
-numbers** (`margins hit 47%` when no source mentions margins), the highest-stakes
-hallucination.
+A **deterministic** groundedness linter for RAG/LLM answers. Flags **fabricated
+numbers** and unsupported claims. An LLM-as-judge can't gate CI (it scores
+differently each run); this gives byte-identical output, proven across seeds.
 
-The point is determinism: an LLM-as-judge can't gate CI because it scores
-differently each run. groundcheck gives byte-identical output across runs, so it
-fits as a lint gate — the test suite proves it across hash seeds. Zero deps.
+`llm` · `rag` · `ai-safety`
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🔒 Private production work
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
+
+**⚡ Gold Engine**
+
+Async SMC/ICT trading engine for XAUUSD. Event-driven `asyncio`, Numba-compiled
+hot paths, `O(1)` per-tick work, ~13.7k lines.
+
+`asyncio` · `numba` · `numpy`
+
+</td>
+<td width="33%" valign="top" align="center">
+
+**📹 Zeem**
+
+Dashcam live video to the browser, sub-second. `JT1078 → MediaMTX → WebRTC`, with
+a Laravel REST backend across three environments.
+
+`webrtc` · `mediamtx` · `laravel`
+
+</td>
+<td width="33%" valign="top" align="center">
+
+**🏢 Watheeq Pro**
+
+Enterprise multi-tenant SaaS under its own org, structured across separate
+service repositories with a staged rollout.
+
+`saas` · `multi-tenant` · `laravel`
 
 </td>
 </tr>
 </table>
 
 <details>
-<summary><b>⚡ Gold Engine</b> — async SMC/ICT scalping engine <i>(private)</i></summary>
+<summary><i>More on the Gold Engine architecture</i></summary>
 
 <br/>
-
-An event-driven `asyncio` rebuild of a synchronous advisory script into a
-non-blocking trading engine for 1M/3M/5M XAUUSD. ~13.7k lines of Python.
 
 ```
 DataIngestionStream ── ticks ──▶ DualLayerEngine ──▶ RiskExecutionManager ──▶ OrderRouter
@@ -218,67 +217,28 @@ DataIngestionStream ── ticks ──▶ DualLayerEngine ──▶ RiskExecuti
 
 - **Two-layer pipeline** — heavy structural analysis only on candle close;
   `O(1)` per-tick work for intrabar sweep detection and a mitigation FSM
-- **Numba-compiled hot paths** — `ema`, `wilder_atr`, `adx`, `find_swings`,
-  `cluster_levels`, with transparent pure-Python fallback
-- **Pluggable feeds** behind a `TickFeed` ABC — Twelve Data + Capital.com
-  WebSocket live, `yfinance` replay for backtesting
-- **Risk layer before the router** — spread/news veto, confluence scoring, and a
-  `PaperRouter` default so nothing touches a funded account by accident
-
-`asyncio` · `numba` · `numpy` · `websockets` · `fastapi`
+- **Numba-compiled hot paths** with a transparent pure-Python fallback
+- **Pluggable feeds** behind a `TickFeed` ABC — live WebSocket or replay backtest
+- **Risk layer before the router**, defaulting to a paper router so nothing
+  touches a funded account by accident
 
 </details>
-
-<details>
-<summary><b>📹 Zeem</b> — dashcam live video infrastructure <i>(private)</i></summary>
-
-<br/>
-
-Live video from Hikvision fleet dashcams to the browser with sub-second latency.
-
-**JT1078 → MediaMTX → WebRTC** — terminating the Chinese fleet-telematics video
-protocol and republishing it as standards-compliant WebRTC. No HLS segment
-latency; the browser gets the stream, not a playlist.
-
-Paired with a Laravel REST backend across three environments on cPanel — tuned
-against real production load, including running a reported OOM down to its
-actual cause instead of throwing memory at it.
-
-`webrtc` · `mediamtx` · `jt1078` · `rtsp` · `laravel`
-
-</details>
-
-<details>
-<summary><b>🏢 Watheeq Pro</b> — enterprise multi-tenant SaaS <i>(private)</i></summary>
-
-<br/>
-
-A phased multi-tenant SaaS build under its own GitHub organization, structured
-across separate service repositories with a staged rollout roadmap.
-
-`saas` · `multi-tenant` · `laravel` · `enterprise`
-
-</details>
-
----
 
 <div align="center">
 
-### How the engine moves a tick
-
-<img width="92%" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/pipeline.svg" alt="tick pipeline" />
-
-<br/><br/>
-
-### GitHub Stats
-
-<img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true&background=0D1117&ring=36BCF7&fire=F2C14E&currStreakLabel=36BCF7" alt="streak" />
+<img width="88%" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/pipeline.svg" alt="Gold Engine tick pipeline" />
 
 </div>
 
 ---
 
 <div align="center">
+
+### GitHub Stats
+
+<img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=RootX22&theme=tokyonight&hide_border=true&background=0D1117&ring=36BCF7&fire=F2C14E&currStreakLabel=36BCF7" alt="streak" />
+
+<br/>
 
 ### Contribution Snake
 
@@ -295,9 +255,7 @@ across separate service repositories with a staged rollout roadmap.
 <a href="mailto:henrry.220267@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
 <a href="https://github.com/RootX22"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="github"/></a>
 
-<br/><br/>
-
-<i>Trading, streaming, and SaaS work lives in private repositories.</i>
+<br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/footer-dark.svg">

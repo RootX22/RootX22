@@ -52,19 +52,22 @@ MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',m
 # (kind, text). Column split for two-column kinds is on the double space.
 LINES = [
     ("cmd",    "whoami"),
-    ("out",    "systems engineer — real-time infrastructure"),
-    ("gap",    ""),
-    ("cmd",    "cat focus.txt"),
-    ("bullet", "async trading engines  ~13.7k LOC · O(1) work per tick"),
-    ("bullet", "webrtc video pipelines  JT1078 → MediaMTX · sub-second"),
-    ("bullet", "multi-tenant SaaS  Laravel · three environments"),
+    ("out",    "software engineer — i build tools other developers run"),
     ("gap",    ""),
     ("cmd",    "ls ~/open-source"),
-    ("link",   "sentinel-audit  34 read-only hardening checks · zero deps"),
-    ("link",   "deploy-forge  atomic release swaps · health-checked rollback"),
+    ("link",   "sentinel-audit  linux hardening auditor · pure bash"),
+    ("link",   "deploy-forge  zero-downtime deploys · atomic swaps"),
+    ("link",   "wp-sentinel  wordpress scanner · detection-only"),
+    ("link",   "tls-sentry  tls certificate monitor · zero deps"),
+    ("link",   "cronscope  crontab linter + weekly heatmap"),
+    ("link",   "groundcheck  rag groundedness linter · deterministic"),
+    ("gap",    ""),
+    ("cmd",    "cat also-shipped.txt"),
+    ("bullet", "async trading engine  XAUUSD · numba · ~13.7k LOC  (private)"),
+    ("bullet", "webrtc video platform  JT1078 → MediaMTX  (private)"),
     ("gap",    ""),
     ("cmd",    "echo $PHILOSOPHY"),
-    ("quote",  "“latency and correctness are not a trade-off”"),
+    ("quote",  "“small, tested, and honest about its limits”"),
 ]
 
 LINE_H = 25

@@ -49,7 +49,7 @@ SANS = ("'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,"
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace"
 
 NAME = "Mohamed Mohsen"
-TAGLINE = "Systems Engineer  ·  Real-time Infrastructure"
+TAGLINE = "Software Engineer  ·  Tools for DevOps, Security & AI"
 
 # (x, y, r, delay) — placed by hand so nothing collides with the type.
 GLINTS = [
