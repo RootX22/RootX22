@@ -43,9 +43,25 @@ bottom.
 
 <div align="center">
 
-### Tech Stack
+### Skills
 
-<img src="https://skillicons.dev/icons?i=python,bash,php,laravel,js,ts,docker,githubactions,linux,nginx,redis,postgres&theme=dark" alt="stack" />
+**Languages**
+
+<img src="https://skillicons.dev/icons?i=cpp,dart,flutter,bash,python,php,laravel&theme=dark" alt="languages" />
+
+**Cloud, Servers &amp; DevOps**
+
+<img src="https://skillicons.dev/icons?i=aws,linux,docker,nginx,git,githubactions&theme=dark" alt="cloud and devops" />
+
+<sub>End-to-end server administration and hardening — provisioning, deployment, and locking boxes down.</sub>
+
+**Security &amp; Pentesting**
+
+<img src="https://skillicons.dev/icons?i=kali&theme=dark" alt="kali linux" />
+<img src="https://img.shields.io/badge/Nmap-4682B4?style=for-the-badge&logoColor=white" alt="Nmap" />
+<img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Burp Suite" />
+<img src="https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white" alt="Metasploit" />
+<img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark" />
 
 </div>
 
