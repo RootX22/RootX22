@@ -9,7 +9,7 @@
 </div>
 
 I build command-line tooling for other engineers: security scanners, DevOps
-utilities, and infrastructure diagnostics. Six are public and listed below.
+utilities, and infrastructure diagnostics. Seven are public and listed below.
 
 They are the same shape on purpose. Small enough to read in one sitting, zero
 runtime dependencies, tested in CI against real systems rather than mocks, and
@@ -130,13 +130,54 @@ proven across seeds, which is what makes it usable in CI.
 </td>
 
 </tr>
+<tr>
+
+<td colspan="2" valign="top">
+
+### 07 · [logsift](https://github.com/RootX22/logsift)
+
+Finds the one request that failed inside a log stream nobody can read by eye.
+Lines that are structurally the same are collapsed into a single pattern with a
+count, and the *rarest* patterns are shown first, because the line that appears
+once in ten thousand is usually the one you are looking for.
+
+Reads stdin, so it composes with `tail`, `kubectl logs`, and `journalctl`.
+Handles JSON and plain text. The README says plainly where the heuristic merges
+two lines a human would keep apart.
+
+`logs` · `observability` · `python`
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/readout-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/readout-light.svg?v=2">
+  <img alt="Example logsift output: three patterns seen once each surface above routine traffic" src="https://raw.githubusercontent.com/RootX22/RootX22/main/assets/readout-dark.svg?v=2" width="100%">
+</picture>
+
+</td>
+
+</tr>
 </table>
+
+## How these are built
+
+The same rules apply to all of them, and they are the reason the list is short.
+
+Nothing is added to your machine that is not already there: no runtime
+dependencies, so a tool runs on a box you have just been handed. Scanners
+observe and never exploit, which is what makes them safe to point at something
+you cannot afford to break. Output is deterministic, so it can gate a pipeline
+instead of merely informing one. Everything is tested in CI against a real
+system rather than a mock of one.
+
+And every README has a section on what the tool gets wrong, where the heuristic
+breaks down, and what it cannot see. That section is the one most projects leave
+out, and it is the one that decides whether you can trust the rest.
 
 ## Private production work
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 **Gold Engine**
 
@@ -146,7 +187,7 @@ paths, constant work per tick, around 13.7k lines.
 `asyncio` · `numba` · `numpy`
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 **Zeem**
 
@@ -156,7 +197,7 @@ with a Laravel backend across three environments.
 `webrtc` · `mediamtx` · `laravel`
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 **Watheeq Pro**
 
@@ -164,6 +205,16 @@ Enterprise multi-tenant SaaS under its own organisation, split across service
 repositories with a staged rollout.
 
 `saas` · `multi-tenant` · `laravel`
+
+</td>
+<td width="25%" valign="top">
+
+**masar**
+
+Locating wide-area network degradation from traffic a fleet already sends, with
+no access to the routers in between.
+
+`tomography` · `networking` · `python`
 
 </td>
 </tr>

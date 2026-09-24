@@ -275,6 +275,65 @@ def pipeline(t: dict) -> str:
     return "".join(out)
 
 
+# -- readout ------------------------------------------------------------------
+
+#: Example output from logsift, taken from that repository's own README. Nothing
+#: here is invented: the point of showing it is that it is what the tool prints.
+LINES = (
+    ("$ logsift < app.log", "cmd"),
+    ("10000 lines -> 24 patterns", "muted"),
+    ("top 10 rarest patterns", "muted"),
+    ("", ""),
+    ("  1x  CRITICAL kernel panic: unable to mount root fs on unknown-block(0,0)", "hit"),
+    ('  1x  {"level":"fatal","msg":"database connection pool exhausted","waiters":812}', "hit"),
+    ("  1x  segfault at 0000dead ip 00007f8a in libssl.so.1.1 error 6", "hit"),
+    ("226x  2024-05-23T03:54:00Z GET /api/products 400 631ms from=10.0.237.39", "noise"),
+    ("...", "noise"),
+)
+
+
+def readout(t: dict) -> str:
+    width, height = 1000, 292
+    out = [open_svg(width, height, "Example output from logsift: the three rare "
+                                   "patterns surface above the routine traffic"),
+           frame(width, height, t), '<g clip-path="url(#clip)">',
+           grid(width, height, t, step=50)]
+
+    out.append(text(64, 50, "READOUT  ·  logsift", fill=t["accent"], size=11,
+                    family=MONO, weight="700", spacing="2.8"))
+    out.append(text(936, 50, "rarest first", fill=t["faint"], size=11, family=MONO,
+                    anchor="end", spacing="1.4"))
+    out.append(f'<rect x="64" y="62" width="872" height="1" fill="{t["edge"]}" '
+               f'fill-opacity="{t["edge_op"]}"/>')
+
+    colours = {"cmd": t["ink"], "muted": t["faint"], "hit": t["ink"],
+               "noise": t["faint"], "": t["faint"]}
+    y = 92
+    for line, kind in LINES:
+        if kind == "hit":
+            # The lines the tool is built to surface get the accent rule, so the
+            # picture makes its own point without a caption.
+            out.append(f'<rect x="52" y="{y - 11}" width="2" height="15" '
+                       f'fill="{t["accent"]}"/>')
+        if line:
+            out.append(text(64, y, line, fill=colours[kind], size=13, family=MONO,
+                            opacity="0.85" if kind == "noise" else None))
+        y += 24
+
+    out.append(f'<rect x="64" y="{y - 11}" width="8" height="14" '
+               f'fill="{t["accent"]}"><animate attributeName="opacity" '
+               f'values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/></rect>')
+
+    out.append(f'<rect x="64" y="{height - 46}" width="872" height="1" '
+               f'fill="{t["edge"]}" fill-opacity="{t["edge_op"]}"/>')
+    out.append(text(64, height - 22,
+                    "Ten thousand lines collapse into two dozen patterns, and the "
+                    "three that happened once are at the top.",
+                    fill=t["muted"], size=12))
+    out.append("</g></svg>")
+    return "".join(out)
+
+
 # -- footer -------------------------------------------------------------------
 
 def footer(t: dict) -> str:
@@ -302,7 +361,7 @@ def footer(t: dict) -> str:
 def main() -> None:
     here = pathlib.Path(__file__).parent
     builders = {"header": header, "capabilities": capabilities,
-                "pipeline": pipeline, "footer": footer}
+                "readout": readout, "pipeline": pipeline, "footer": footer}
     for name, build in builders.items():
         for theme, palette in THEMES.items():
             path = here / f"{name}-{theme}.svg"
