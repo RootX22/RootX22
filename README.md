@@ -9,17 +9,20 @@
 </div>
 
 I build command-line tooling for other engineers: security scanners, DevOps
-utilities, and infrastructure diagnostics. Seven are public and listed below.
+utilities, and infrastructure diagnostics. Eight are public and listed below.
 
 They are the same shape on purpose. Small enough to read in one sitting, zero
 runtime dependencies, tested in CI against real systems rather than mocks, and
 explicit about what they do not do. A tool that overstates its coverage is worse
 than no tool, because you stop looking.
 
+I also make things for people who never open a terminal, such as a video
+downloader with a native Mac app and a Firefox add-on, listed after the tools.
+
 Alongside those I build private production systems: an async trading engine, a
 sub-second video platform, and a multi-tenant SaaS. Summarised further down.
 
-Reach me at [henrry.220267@gmail.com](mailto:henrry.220267@gmail.com).
+Reach me at [mo7sen.cto@gmail.com](mailto:mo7sen.cto@gmail.com).
 
 <div align="center">
 
@@ -156,6 +159,25 @@ two lines a human would keep apart.
 </td>
 
 </tr>
+<tr>
+
+<td colspan="2" valign="top">
+
+### 08 · [plumbline](https://github.com/RootX22/plumbline)
+
+Checks that a README is true. Every command, path, make target, package script,
+module and environment variable a document asserts is pulled out and checked,
+and the run exits non-zero when one fails.
+
+A local model reads the prose to find claims but never decides whether one
+holds; the checks do. It started with a real bug: a deploy guide of mine whose
+every command had pointed at the wrong path since the scripts moved.
+
+`documentation` · `ci` · `llm`
+
+</td>
+
+</tr>
 </table>
 
 ## How these are built
@@ -172,6 +194,31 @@ system rather than a mock of one.
 And every README has a section on what the tool gets wrong, where the heuristic
 breaks down, and what it cannot see. That section is the one most projects leave
 out, and it is the one that decides whether you can trust the rest.
+
+## Apps and browser extensions
+
+<table>
+<tr>
+
+<td colspan="2" valign="top">
+
+### 09 · [vidkeep](https://github.com/RootX22/vidkeep)
+
+Video downloads for offline viewing, built on yt-dlp. A file is fetched over
+several bounded range requests at once, picked to fit the disk you have, and
+resumed range by range after an interruption. In its own benchmark four
+connections ran four to six times faster than one.
+
+Ships as a command, a native SwiftUI app for macOS, and a Firefox add-on that
+hands downloads to it over native messaging, tested together in a real Firefox
+in CI.
+
+`python` · `swiftui` · `firefox`
+
+</td>
+
+</tr>
+</table>
 
 ## Private production work
 
@@ -250,7 +297,7 @@ reaches a funded account by accident.
 
 ## Elsewhere
 
-[GitHub](https://github.com/RootX22) · [Email](mailto:henrry.220267@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/mohamed-mohsen-804a9897) · [Email](mailto:mo7sen.cto@gmail.com)
 
 <div align="center">
 
