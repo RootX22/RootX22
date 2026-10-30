@@ -16,8 +16,9 @@ runtime dependencies, tested in CI against real systems rather than mocks, and
 explicit about what they do not do. A tool that overstates its coverage is worse
 than no tool, because you stop looking.
 
-I also make things for people who never open a terminal, such as a video
-downloader with a native Mac app and a Firefox add-on, listed after the tools.
+I also make things for people who never open a terminal: a video downloader with
+a native Mac app and a Firefox add-on, and a browser extension that turns long
+YouTube videos into courses. Those two are listed after the tools.
 
 Alongside those I build private production systems: an async trading engine, a
 sub-second video platform, and a multi-tenant SaaS. Summarised further down.
@@ -200,7 +201,7 @@ out, and it is the one that decides whether you can trust the rest.
 <table>
 <tr>
 
-<td colspan="2" valign="top">
+<td width="50%" valign="top">
 
 ### 09 · [vidkeep](https://github.com/RootX22/vidkeep)
 
@@ -214,6 +215,21 @@ hands downloads to it over native messaging, tested together in a real Firefox
 in CI.
 
 `python` · `swiftui` · `firefox`
+
+</td>
+
+<td width="50%" valign="top">
+
+### 10 · [coursemark](https://github.com/RootX22/coursemark)
+
+Study long YouTube videos like a course. Chapters become a checklist that ticks
+itself only after real playback, so seeking past a chapter or an ad playing does
+not count, with notes pinned to the moment and a Markdown export.
+
+Manifest V3 for Chrome and Firefox, English and Arabic, no server. Tested end to
+end in Chromium against a local copy of the watch page, never against YouTube.
+
+`javascript` · `browser-extension` · `i18n`
 
 </td>
 
