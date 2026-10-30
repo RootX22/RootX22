@@ -113,6 +113,7 @@ collisions, and the `0 0 13 * 5` trap where day-of-month and day-of-week are
 combined with *or*, not *and*.
 
 Renders the week as a heatmap. Cross-checked against `croniter` in CI.
+**[Try it in your browser](https://rootx22.github.io/cronscope/)**.
 
 `cron` · `devops` · `visualization`
 
@@ -128,6 +129,7 @@ numbers, unsupported claims, and broken citations.
 A model asked to judge another model scores differently on each run, so it
 cannot gate a pipeline. This returns byte-identical output for identical input,
 proven across seeds, which is what makes it usable in CI.
+**[Try it in your browser](https://rootx22.github.io/groundcheck/)**.
 
 `llm` · `rag` · `ai-safety`
 
