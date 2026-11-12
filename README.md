@@ -285,6 +285,8 @@ no access to the routers in between.
 </tr>
 </table>
 
+**For sale or licence:** a [WAN optimizer for DC ⇄ DR replication](https://rootx22.github.io/dc-dr-wan-optimizer/). In lab tests the next full VM backup crossed a 100 Mbit link in 8 seconds instead of 89. [Product overview](https://github.com/RootX22/dc-dr-wan-optimizer).
+
 <details>
 <summary>How the Gold Engine is put together</summary>
 
